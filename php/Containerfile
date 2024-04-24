@@ -1,4 +1,6 @@
 FROM registry.access.redhat.com/ubi9/php-81
 RUN mkdir /app
 COPY hello.php /app
+EXPOSE 9000
+RUN chmod 775 -R /var/www/html/
 CMD /usr/libexec/s2i/run
