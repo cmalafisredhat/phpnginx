@@ -5,6 +5,6 @@ RUN mkdir app
 COPY hello.php app/
 EXPOSE 8080
 RUN mkdir -p /var/www/html/
-RUN chown default /var/www/html/
+#RUN chown default /var/www/html/
 RUN chmod 775 -R /var/www/html/
 #CMD /usr/libexec/s2i/run
