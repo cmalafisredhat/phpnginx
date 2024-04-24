@@ -1,7 +1,8 @@
-FROM registry.access.redhat.com/ubi9/php-81
+#FROM registry.access.redhat.com/ubi9/php-81
+FROM bitnami/php-fpm:latest
 USER root
 RUN mkdir app
 COPY hello.php app/
-EXPOSE 9000
+EXPOSE 8080
 RUN chmod 775 -R /var/www/html/
-CMD /usr/libexec/s2i/run
+#CMD /usr/libexec/s2i/run
