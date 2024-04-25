@@ -1,7 +1,7 @@
 #FROM registry.access.redhat.com/ubi9/php-81
 FROM php:8.2-fpm
 USER root
-RUN apt-get install vi -y
+RUN apt-get install vim -y
 RUN mkdir app
 COPY hello.php app/
 EXPOSE 8080
